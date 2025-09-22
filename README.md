@@ -19,7 +19,9 @@ By the end of this project, I am able to explain (without Google):
 
 ---
 
-## 📂 Project Structure
+---
+
+## 3️⃣ Project Structure (Standalone Markdown)
 
 alx_html_css/
 └── css_basic/
