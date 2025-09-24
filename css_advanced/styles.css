@@ -1,2 +1,202 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 40px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav img {
+  height: 40px;
+  width: auto;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.links li a:hover {
+  opacity: 0.8;
+}
+
+/* Banner Section Styles */
+main section:first-child {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/Object.png") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Main banner content */
+main section:first-child > div:first-child {
+  margin-bottom: 100px;
+}
+
+main section:first-child h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Three words styling */
+main section:first-child > div:first-child span {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Register button */
+main section:first-child button {
+  background: linear-gradient(135deg, #c271ff, #9356dc);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:first-child button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(194, 113, 255, 0.4);
+}
+
+/* Learn from the pros section */
+main section:first-child > div:last-child {
+  width: 100%;
+  max-width: 1200px;
+}
+
+main section:first-child h2 {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
+main section:first-child h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #c271ff;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+/* Instructors grid */
+main section:first-child > div:last-child > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Individual instructor card */
+main section:first-child > div:last-child > div > div {
+  text-align: center;
+  max-width: 200px;
+}
+
+main section:first-child > div:last-child > div > div img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+main section:first-child > div:last-child > div > div h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+main section:first-child > div:last-child > div > div p {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .links li a {
+    font-size: 12px;
+  }
+
+  main section:first-child h1 {
+    font-size: 3rem;
+  }
+
+  main section:first-child > div:last-child > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  main section:first-child h1 {
+    font-size: 2.5rem;
+  }
+
+  main section:first-child > div:first-child span {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main section:first-child > div:last-child > div {
+    grid-template-columns: 1fr;
+  }
 }
